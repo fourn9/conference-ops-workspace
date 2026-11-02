@@ -1,36 +1,5 @@
 # Conference Ops Workspace
 
-**イベント単位の業務・判断・引き継ぎを整理する、AI支援型の運営ワークスペース。**
+イベント用ワークスペース、journal、運営スキル、workflowの実装は **[Conference Ops Engine](https://github.com/fourn9/conference-ops-engine)** に統合しました。
 
-[木村慎一 / fourn9](https://github.com/fourn9) がAIコーディングアシスタントを活用して開発したプロジェクトの公開ケーススタディです。[English](README.md)
-
-技術カンファレンスの企画・運営に必要な指示、調査成果、文面の下書き、判断の記録を整理しました。さらに、AIとの壁打ちで出た途中案が、次のセッションで確定事項として扱われる問題に対し、対話の記録と想起を行うセッションジャーナルのプロトタイプを実装しました。
-
-このリポジトリには、過去の非公開プロジェクトの設計説明と、公開用に新規作成した再現デモを収録しています。デモは当時のソースコードそのものではありません。
-
-## 試す
-
-Python 3.9以上。外部ライブラリ・APIキー・ネット接続は不要です。
-
-```bash
-git clone https://github.com/fourn9/conference-ops-workspace.git
-cd conference-ops-workspace
-python3 demo/workspace.py
-python3 -m unittest discover -s tests -v
-```
-
-架空イベントについて「確定1件・未決2件・棄却1件」と未完了タスク3件を表示します。AIが確定と記載しただけの案は、人の判断記録がなければ未決のまま扱い、それに依存する作業もブロックします。[出力例](examples/operations-handoff.md)
-
-## 元プロジェクトで実装したもの
-
-- 登壇者対応、スポンサー対応、文面作成、レポート作成の手順を整理した運営環境。
-- 調査結果やテーマ設計をイベント単位で蓄積する構成。
-- 対話ログの抽出・バックグラウンド要約・索引・想起のためのスクリプト。
-- 確定事項、検討中の案、棄却理由、次回への引き継ぎを分ける記憶設計。
-- セッション履歴、学び、設計判断をそれぞれ別の記録として管理する仕組み。
-
-公開デモは、架空の構造化データから引き継ぎ文書を生成する部分に絞っています。実ログの要約、社内ツール接続、送信機能、承認者の本人認証は含みません。元プロジェクトのジャーナル設計は提案段階の記録を含むため、全社導入済みや効果実証済みとは表現していません。
-
-共通ワークフローの配布については、[Conference Ops Engine](https://github.com/fourn9/conference-ops-engine) を参照してください。
-
-[設計と判断の詳細](docs/case-study.md) / [応募用の紹介文](docs/application-summary.md) / [公開範囲](PUBLICATION.md)
+[イベント用テンプレート](https://github.com/fourn9/conference-ops-engine/tree/main/templates/_instance)と[設定手順](https://github.com/fourn9/conference-ops-engine/blob/main/docs/configuration.md)を利用してください。このリポジトリは移転案内として残しています。
